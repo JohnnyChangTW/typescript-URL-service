@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  mysql:
+    # mysql image for M1:
+    # image: arm64v8/mysql:oracle
+    # mysql image for deployment
+    image: mysql:8.0.31
+    container_name: interview-assignment-mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=interview-assignment
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=interview-assignment-password
+      - MYSQL_ROOT_PASSWORD=interview-assignment-password
+      - TZ=UTC
+    command: --default_authentication_plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - .data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - shared
+  backend:
+    depends_on:
+      - mysql
+    container_name: interview-assignment-backend
+    build: .
+    # restart: always
+    command: bash -c 'while !</dev/tcp/mysql/3306; do sleep 1; done; npm start'
+    ports:
+      - "3000:3000"
+    networks:
+      - shared
+
+networks:
+  shared:
+    name: shared
