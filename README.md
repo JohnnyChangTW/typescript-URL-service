@@ -62,7 +62,7 @@ For simplicity, this project hardcoded all secrets and configurations, which in 
 ### Datebase selection
 
 For convenience I chose MySQL as the database.
-However For this project, it seems that we can use mongoDB or other NoSQL database for storing data, since there are no relation between the data.
+However for this project, it seems that we can use mongoDB or other NoSQL database for storing data, since there is no relation needed.
 
 
 
