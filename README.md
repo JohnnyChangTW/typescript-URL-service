@@ -16,8 +16,8 @@ Note: It may take a few seconds (for the application to start running) before we
 1. This project uses [`express-no-stress-typescript`](https://github.com/cdimascio/generator-express-no-stress-typescript) as the basic scaffold with some minor modifications.
 2. `express-no-stress-typescript` uses [express-openapi-validator](https://github.com/cdimascio/express-openapi-validator) to automatically handle all API validation based on what you've defined in the spec.
 3. There are two key files:
-`server/routes.ts` - This references the implementation of all of the routes.
-`server/common/api.yaml` - This file contains the [OpenAPI spec](https://swagger.io/specification/).
+- `server/routes.ts` - This references the implementation of all of the routes.
+- `server/common/api.yaml` - This file contains the [OpenAPI spec](https://swagger.io/specification/).
 
 
 ## Discussion
