@@ -73,6 +73,7 @@ However For this project, it seems that we can use mongoDB or other NoSQL databa
 - Enhance the project much more by SOLID principle.
 - Automate the api.yaml definitiion, in stead of typing by hand.
 - Better error handling.
+- Refine /v1/metrics further
 
 
 
