@@ -1,8 +1,3 @@
-# interview-assignment
-
-Stakefish interview assignment
-
-
 ## Quick Start
 
 ```shell
